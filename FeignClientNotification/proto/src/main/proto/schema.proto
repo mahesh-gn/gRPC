@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+package com.proto;
+
+option java_multiple_files = true;
+
+message NotificationRequest
+{
+    int32 notificationId = 1;
+}
+
+
+
+service StudentNotificationService
+{
+   rpc getNotificationById(NotificationRequest) returns(NotificationResponse);
+}
